@@ -70,7 +70,7 @@ class Home {
             habilidades
         } = req.body
         var user = {
-            id_public: idLib.nuevo(),
+            id_public: idLib.nuevo('telcel','telcel'),
             nombre,
             email,
             puesto,
