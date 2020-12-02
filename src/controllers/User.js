@@ -83,7 +83,7 @@ class Home {
         if (!user_aux) {
             await user_model.save()
         }
-        user = null
+        // user = null
         res.json({ user })
         return
     };

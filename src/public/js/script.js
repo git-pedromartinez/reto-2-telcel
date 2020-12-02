@@ -24,13 +24,11 @@
             domicilio: in_domicilio.value,
             habilidades: in_habilidad.value
         }
-        var user_current={
-            
-        }
+        var user_current=null
         axios
             .post(`/nuevo_registro/`, user)
             .then((response) => {
-                user_current=data.content
+                user_current=response.data.user
             })
             .catch((error) => {})
             .finally(function() {

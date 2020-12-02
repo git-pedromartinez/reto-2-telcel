@@ -33,80 +33,83 @@
         <hr>
         <div class="resultados_de_busqueda">
             <%for(user of users){%>
-            <div class="card" style="width: 18rem;">
-                <img src="https://picsum.photos/200/150?random=1" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title"><%=user.nombre%></h5>
-                    <p style="font-size: .80em;">Puesto: <%=user.puesto%></p>
-                    <p style="font-size: .80em;">Correo: <%=user.email%></p>
-                  
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="<%=user.id_public%>" data-backdrop="static" data-keyboard="false"
-                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-scrollable">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel">Usuario <%=user.id_public%></h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <div id="form_new_user">
-                                        <div class="form-group">
-                                            <label for="formGroupExampleInput">Nombre</label>
-                                            <input disabled value="<%=user.nombre%>" required id="in_nombre" type="text"
-                                                class="form-control" id="formGroupExampleInput"
-                                                placeholder="Escribe aqui tu nombre">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">Email</label>
-                                            <input disabled value="<%=user.email%>" required name="email" id="in_email"
-                                                type="email" class="form-control" id="exampleInputEmail1"
-                                                aria-describedby="emailHelp" placeholder="Escribe aqui tu correo">
-                                            <small class="form-text text-muted">Recuerda que tu correo debe ser
-                                                unico</small>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="formGroupExampleInput">Puesto</label>
-                                            <input disabled value="<%=user.puesto%>" required id="in_puesto" type="text"
-                                                class="form-control" id="formGroupExampleInput"
-                                                placeholder="Empleo u ocupacion">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="formGroupExampleInput">Fecha de nacimiento</label>
-                                            <input disabled value="<%=user.fecha%>" required type="date" name=""
-                                                id="in_fecha">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="formGroupExampleInput">Domicilio</label>
-                                            <input disabled value="<%=user.domicilio%>" required id="in_domicilio"
-                                                type="text" class="form-control" id="formGroupExampleInput"
-                                                placeholder="Calle o zona">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="formGroupExampleInput">Habilidad</label>
-                                            <input disabled value="<%=user.habilidades%>" required id="in_habilidad"
-                                                type="text" class="form-control" id="formGroupExampleInput"
-                                                placeholder="Cuales son tus habilidad">
+            <div style="margin: 16px;">
+                <div class="card" style="width: 18rem;" >
+                    <img src="https://picsum.photos/200/150?random=1" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"><%=user.nombre%></h5>
+                        <p style="font-size: .80em;">Puesto: <%=user.puesto%></p>
+                        <p style="font-size: .80em;">Correo: <%=user.email%></p>
+                      
+    
+                        <!-- Modal -->
+                        <div class="modal fade" id="<%=user.id_public%>" data-backdrop="static" data-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Usuario <%=user.id_public%></h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div id="form_new_user">
+                                            <div class="form-group">
+                                                <label for="formGroupExampleInput">Nombre</label>
+                                                <input disabled value="<%=user.nombre%>" required id="in_nombre" type="text"
+                                                    class="form-control" id="formGroupExampleInput"
+                                                    placeholder="Escribe aqui tu nombre">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Email</label>
+                                                <input disabled value="<%=user.email%>" required name="email" id="in_email"
+                                                    type="email" class="form-control" id="exampleInputEmail1"
+                                                    aria-describedby="emailHelp" placeholder="Escribe aqui tu correo">
+                                                <small class="form-text text-muted">Recuerda que tu correo debe ser
+                                                    unico</small>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="formGroupExampleInput">Puesto</label>
+                                                <input disabled value="<%=user.puesto%>" required id="in_puesto" type="text"
+                                                    class="form-control" id="formGroupExampleInput"
+                                                    placeholder="Empleo u ocupacion">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="formGroupExampleInput">Fecha de nacimiento</label>
+                                                <input disabled value="<%=user.fecha%>" required type="date" name=""
+                                                    id="in_fecha">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="formGroupExampleInput">Domicilio</label>
+                                                <input disabled value="<%=user.domicilio%>" required id="in_domicilio"
+                                                    type="text" class="form-control" id="formGroupExampleInput"
+                                                    placeholder="Calle o zona">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="formGroupExampleInput">Habilidad</label>
+                                                <input disabled value="<%=user.habilidades%>" required id="in_habilidad"
+                                                    type="text" class="form-control" id="formGroupExampleInput"
+                                                    placeholder="Cuales son tus habilidad">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <div style="display: flex; justify-content: space-around;">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#<%=user.id_public%>">Ver info detallada</button>
+                            <a href="/" class="btn btn-primary">Go back</a>
+                        </div>
+                        <!-- Button trigger modal -->
+                        
                     </div>
-                    <div style="display: flex; justify-content: space-around;">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#<%=user.id_public%>">Ver info detallada</button>
-                        <a href="/" class="btn btn-primary">Go back</a>
-                    </div>
-                    <!-- Button trigger modal -->
-                    
                 </div>
             </div>
+            
             <%}%>
         </div>
         
